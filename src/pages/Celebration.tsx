@@ -1,4 +1,5 @@
 import { FloatingHearts } from "@/components/FloatingHearts";
+import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Heart, Sparkles } from "lucide-react";
@@ -8,7 +9,7 @@ const Celebration = () => {
   const [showFireworks, setShowFireworks] = useState(false);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-rose-light/20 to-gold-light/30">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-rose-light/20 to-gold-light/30 pb-24">
       <FloatingHearts />
       
       {showFireworks && (
@@ -84,6 +85,8 @@ const Celebration = () => {
           </div>
         </div>
       </div>
+
+      <GlobalNavigation />
     </div>
   );
 };

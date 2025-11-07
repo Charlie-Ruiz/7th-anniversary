@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FloatingHearts } from "@/components/FloatingHearts";
+import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Heart, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -13,7 +14,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-rose-light/20 to-peach-light/30">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-rose-light/20 to-peach-light/30 pb-24">
       <FloatingHearts />
       
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
@@ -53,11 +54,9 @@ const Home = () => {
             </button>
           </div>
         </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <p className="text-sm text-muted-foreground">Scroll down to explore</p>
-        </div>
       </div>
+
+      <GlobalNavigation />
     </div>
   );
 };

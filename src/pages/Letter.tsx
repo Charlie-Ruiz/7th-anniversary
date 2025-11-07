@@ -1,4 +1,5 @@
 import { FloatingHearts } from "@/components/FloatingHearts";
+import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -9,7 +10,7 @@ const Letter = () => {
   const [showFullLetter, setShowFullLetter] = useState(false);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-peach-light/20 to-rose-light/30">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-peach-light/20 to-rose-light/30 pb-24">
       <FloatingHearts />
       
       <div className="relative z-10 py-20 px-4">
@@ -94,6 +95,8 @@ const Letter = () => {
           </div>
         </div>
       </div>
+
+      <GlobalNavigation />
     </div>
   );
 };
