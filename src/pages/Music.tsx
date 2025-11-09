@@ -28,13 +28,13 @@ const Music = () => {
   };
 
   const songs = [
-    { title: "Acordando o predio", note: "Our song in portuguese jusjusjus", year: "2019", audio: "/src/assets/Acordando.mp3" },
-    { title: "Coqueta", note: "The new favorite one and in this version 🎵", year: "2025", audio: "/src/assets/Coqueta.mp3" },
-    { title: "El Merengue", note: "The one that makes me cry :(", year: "2024", audio: "/src/assets/Merengue.mp3" },
-    { title: "Mine", note: "You will always be mine ❤️", year: "2020", audio: "/src/assets/Mine.mp3" },
-    { title: "Nenita", note: "I am your nenita 🌟", year: "2025", audio: "/src/assets/Nenita.mp3" },
-    { title: "Too Sweet", note: "Your favorite one that I don't like haha", year: "2025", audio: "/src/assets/Too sweet.mp3" },
-    { title: "Under the influence", note: "Our jusjusjus song for doing jusjusjus things 🔥", year: "2024", audio: "/src/assets/Under.mp3" },
+    { title: "Acordando o predio", note: "Our song in portuguese jusjusjus", year: "2019", audio: "./src/assets/Acordando.mp3" },
+    { title: "Coqueta", note: "The new favorite one and in this version 🎵", year: "2025", audio: "./src/assets/Coqueta.mp3" },
+    { title: "El Merengue", note: "The one that makes me cry :(", year: "2024", audio: "./src/assets/Merengue.mp3" },
+    { title: "Mine", note: "You will always be mine ❤️", year: "2020", audio: "./src/assets/Mine.mp3" },
+    { title: "Nenita", note: "I am your nenita 🌟", year: "2025", audio: "./src/assets/Nenita.mp3" },
+    { title: "Too Sweet", note: "Your favorite one that I don't like haha", year: "2025", audio: "./src/assets/Too sweet.mp3" },
+    { title: "Under the influence", note: "Our jusjusjus song for doing jusjusjus things 🔥", year: "2024", audio: "./src/assets/Under.mp3" },
   ];
 
   return (

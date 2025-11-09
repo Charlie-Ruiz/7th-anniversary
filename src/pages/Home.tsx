@@ -64,7 +64,7 @@ const Home = () => {
       <GlobalNavigation />
       <audio 
         ref={audioRef}
-        src="/src/assets/Manuel Medrano - La Distancia (Letra).mp3"
+        src="./src/assets/Manuel Medrano - La Distancia (Letra).mp3"
         loop
       />
     </div>

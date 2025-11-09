@@ -12,7 +12,7 @@ const timelineData = [
     description: "This first year of our relationship was beautiful and intense. We were just learning how to love and how to build a relationship that truly mattered. It was a year full of first times, of discoveries, of new emotions, and of moments.",
     icon: Heart,
     color: "rose",
-    image: "/src/assets/2018.jpeg",
+    image: "./src/assets/2018.jpeg",
   },
   {
     year: 2019,
@@ -20,7 +20,7 @@ const timelineData = [
     description: "It took a long time for us to finally spend a night together — our long-awaited sleepover. Waking up next to you was one of the most beautiful feelings I’ve ever experienced, and from that moment on, I knew I never wanted to spend another night without you by my side.",
     icon: Moon,
     color: "gold",
-    image: "/src/assets/2019.jpeg",
+    image: "./src/assets/2019.jpeg",
   },
   {
     year: 2020,
@@ -28,7 +28,7 @@ const timelineData = [
     description: "During the pandemic, we went through so much. It was a very tough year for us, yet we stayed connected through video calls, messages, and games. It wasn’t easy, but I’m so grateful that we had the strength and the will to keep going, to stay together despite everything.",
     icon: HomeIcon,
     color: "peach",
-    image: "/src/assets/2020.jpeg",
+    image: "./src/assets/2020.jpeg",
   },
   {
     year: 2021,
@@ -36,7 +36,7 @@ const timelineData = [
     description: "That year, a new member joined our family, Miu — our baby, Smirnoff Alexei. In the middle of the storm, he was the miracle of that year. From the moment he was just a tiny little one, you became the best dad ever — full of love, patience, and tenderness.",
     icon: Cat,
     color: "rose",
-    image: "/src/assets/2021.jpg",
+    image: "./src/assets/2021.jpg",
   },
   {
     year: 2022,
@@ -44,7 +44,7 @@ const timelineData = [
     description: "This year, we finally moved in together. At first, we lived in a tiny apartment, but soon after, we found a new one for the four of us. That was the beginning of our home, just the two of us, with Azúcar and Alexei, against the world.",
     icon: Sparkles,
     color: "gold",
-    image: "/src/assets/2022.jpg",
+    image: "./src/assets/2022.jpg",
   },
   {
     year: 2023,
@@ -52,7 +52,7 @@ const timelineData = [
     description: "With a lot of effort and hard work (and a little help), we saved enough to buy our motorcycle. Omega will always be our first one, the one you truly learned to ride on, the one that took us to so many places, through the cold, the heat, the rain, and so much fun.",
     icon: Bike,
     color: "peach",
-    image: "/src/assets/2023.jpg",
+    image: "./src/assets/2023.jpg",
   },
     {
     year: 2023,
@@ -60,7 +60,7 @@ const timelineData = [
     description: "You graduated from EPN. I’ve always been so proud of you, but that day was truly special, watching you present, defend your thesis, and then celebrate your big day. You’re the most perfect engineer in the world: intelligent, strong, and capable of absolutely anything you set your mind to.",
     icon: GraduationCap,
     color: "rose",
-    image: "/src/assets/20232.jpg",
+    image: "./src/assets/20232.jpg",
   },
   {
     year: 2024,
@@ -68,7 +68,7 @@ const timelineData = [
     description: "New job, new city, a new beginning. It was the year we both had to start over on our own. Learning to live without you by my side was one of the hardest lessons. We had to adapt, grow, and overcome so much, but it made us stronger. We also learned to love each other even more despite the distance, and every reunion, every minute together, became even more precious.",
     icon: Plane,
     color: "rose",
-    image: "/src/assets/2024.webp",
+    image: "./src/assets/2024.webp",
   },
   {
     year: 2025,
@@ -76,7 +76,7 @@ const timelineData = [
     description: "And now… seven years together, my love! Can you believe it? Seven beautiful years by your side. These years have been full of learning, growth, laughter, and love. We’ve grown so much, both as a couple and as individuals. All these years together are proof that when love is real, anything is possible.",
     icon: Sparkles,
     color: "gold",
-    image: "/src/assets/2025.jpeg",
+    image: "./src/assets/2025.jpeg",
   },
 ];
 
