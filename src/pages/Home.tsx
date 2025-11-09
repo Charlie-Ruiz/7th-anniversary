@@ -3,43 +3,48 @@ import { FloatingHearts } from "@/components/FloatingHearts";
 import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Heart, Music } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Home = () => {
   const [musicPlaying, setMusicPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const toggleMusic = () => {
-    setMusicPlaying(!musicPlaying);
-    // Here you would integrate actual music playback
+    if (audioRef.current) {
+      if (musicPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setMusicPlaying(!musicPlaying);
+    }
   };
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-rose-light/20 to-peach-light/30 pb-24">
       <FloatingHearts />
-      
+
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
-        <div className="space-y-8 animate-fadeIn">
-          <div className="space-y-4">
+        <div className="space-y-12 animate-fadeIn">
+          <div className="space-y-6">
             <Heart className="w-20 h-20 mx-auto text-primary animate-heartbeat fill-primary" />
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-romantic">
-              Our Beginning
+              Happy anniversary my love!
             </h1>
             <p className="text-2xl md:text-3xl font-serif text-foreground/80">
               7 years of adventures together 💞
             </p>
           </div>
 
-          <div className="space-y-6 max-w-2xl mx-auto">
+          <div className="space-y-12 max-w-2xl mx-auto">
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-              From that magical first moment to today, every second with you has been a treasure.
-              This journey through our memories is a celebration of us — our laughter, our dreams,
-              and the love that keeps growing stronger.
+              Since that November 9th, seven years ago, I haven’t stopped loving you for even a second. These years have been filled with love, laughter, tears, adventures, surprises, disagreements, anger, kisses, and reunions. And I wouldn’t change a single thing, because every moment has led us to this beautiful relationship we share today.
             </p>
 
             <Link to="/timeline">
-              <Button 
-                size="lg" 
-                className="bg-romantic hover:opacity-90 text-white font-semibold px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              <Button
+                size="lg"
+                className="mt-6 bg-romantic hover:opacity-90 text-white font-semibold px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Begin Our Journey 💕
               </Button>
@@ -57,6 +62,11 @@ const Home = () => {
       </div>
 
       <GlobalNavigation />
+      <audio 
+        ref={audioRef}
+        src="/src/assets/Manuel Medrano - La Distancia (Letra).mp3"
+        loop
+      />
     </div>
   );
 };

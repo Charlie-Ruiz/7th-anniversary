@@ -3,16 +3,38 @@ import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Music as MusicIcon, Play } from "lucide-react";
+import { Music as MusicIcon, Play, Pause } from "lucide-react";
+import { useState, useRef } from "react";
 
 const Music = () => {
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handlePlay = (index: number, audioSrc: string) => {
+    if (playingIndex === index) {
+      // Pause if the same song is clicked
+      audioRef.current?.pause();
+      setPlayingIndex(null);
+    } else {
+      // Stop current song if any
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      // Play new song
+      audioRef.current = new Audio(audioSrc);
+      audioRef.current.play();
+      setPlayingIndex(index);
+    }
+  };
+
   const songs = [
-    { title: "Our First Dance", note: "The song that started it all 💃", year: "2018" },
-    { title: "Road Trip Anthem", note: "Singing at the top of our lungs 🚗", year: "2019" },
-    { title: "Rainy Day Song", note: "Cozy moments together ☔", year: "2020" },
-    { title: "Happy Song", note: "Makes us smile every time 😊", year: "2021" },
-    { title: "Dance Kitchen Song", note: "Our cooking playlist essential 🍳", year: "2022" },
-    { title: "Love Ballad", note: "When words aren't enough 💝", year: "2023" },
+    { title: "Acordando o predio", note: "Our song in portuguese jusjusjus", year: "2019", audio: "/src/assets/Acordando.mp3" },
+    { title: "Coqueta", note: "The new favorite one and in this version 🎵", year: "2025", audio: "/src/assets/Coqueta.mp3" },
+    { title: "El Merengue", note: "The one that makes me cry :(", year: "2024", audio: "/src/assets/Merengue.mp3" },
+    { title: "Mine", note: "You will always be mine ❤️", year: "2020", audio: "/src/assets/Mine.mp3" },
+    { title: "Nenita", note: "I am your nenita 🌟", year: "2025", audio: "/src/assets/Nenita.mp3" },
+    { title: "Too Sweet", note: "Your favorite one that I don't like haha", year: "2025", audio: "/src/assets/Too sweet.mp3" },
+    { title: "Under the influence", note: "Our jusjusjus song for doing jusjusjus things 🔥", year: "2024", audio: "/src/assets/Under.mp3" },
   ];
 
   return (
@@ -35,12 +57,17 @@ const Music = () => {
             {songs.map((song, index) => (
               <Card
                 key={index}
+                onClick={() => handlePlay(index, song.audio)}
                 className="p-6 backdrop-blur-sm bg-card/80 border-2 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-fadeIn group cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-romantic flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Play className="w-6 h-6 text-white fill-white" />
+                    {playingIndex === index ? (
+                      <Pause className="w-6 h-6 text-white fill-white animate-pulse" />
+                    ) : (
+                      <Play className="w-6 h-6 text-white fill-white" />
+                    )}
                   </div>
                   
                   <div className="flex-1">
@@ -58,17 +85,6 @@ const Music = () => {
             ))}
           </div>
 
-          <Card className="p-8 backdrop-blur-sm bg-card/80 border-2 text-center space-y-4 mb-12">
-            <p className="text-lg text-foreground/70">
-              🎵 Add your Spotify playlist link here to play our favorite songs together 🎵
-            </p>
-            <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <MusicIcon className="w-16 h-16 mx-auto text-primary/50" />
-                <p className="text-muted-foreground">Spotify Player Embed</p>
-              </div>
-            </div>
-          </Card>
 
           <div className="flex justify-center gap-4">
             <Link to="/letter">

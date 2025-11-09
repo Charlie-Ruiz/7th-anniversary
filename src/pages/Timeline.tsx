@@ -1,74 +1,82 @@
 import { FloatingHearts } from "@/components/FloatingHearts";
 import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Card } from "@/components/ui/card";
-import { Calendar, Heart, MapPin, Plane, Home as HomeIcon, Sparkles } from "lucide-react";
+import { Bike, Heart, Cat, Home as HomeIcon, Sparkles, Moon, GraduationCap, Plane } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const timelineData = [
   {
     year: 2018,
-    title: "Our First Date",
-    description: "The day our story began. Coffee turned into hours of conversation, and I knew you were special.",
+    title: "Our First Year Together",
+    description: "This first year of our relationship was beautiful and intense. We were just learning how to love and how to build a relationship that truly mattered. It was a year full of first times, of discoveries, of new emotions, and of moments.",
     icon: Heart,
     color: "rose",
-    image: "https://images.unsplash.com/photo-1502301103665-0b95cc738daf?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2018.jpeg",
   },
   {
     year: 2019,
-    title: "Our First Trip Together",
-    description: "Adventures in new places, making memories that would last forever. Every moment with you felt like magic.",
-    icon: Plane,
+    title: "Our First Pijamada Real",
+    description: "It took a long time for us to finally spend a night together — our long-awaited sleepover. Waking up next to you was one of the most beautiful feelings I’ve ever experienced, and from that moment on, I knew I never wanted to spend another night without you by my side.",
+    icon: Moon,
     color: "gold",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2019.jpeg",
   },
   {
     year: 2020,
     title: "Pandemic Memories",
-    description: "We grew closer even when the world felt distant. Home became our favorite place because you were there.",
+    description: "During the pandemic, we went through so much. It was a very tough year for us, yet we stayed connected through video calls, messages, and games. It wasn’t easy, but I’m so grateful that we had the strength and the will to keep going, to stay together despite everything.",
     icon: HomeIcon,
     color: "peach",
-    image: "https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2020.jpeg",
   },
   {
     year: 2021,
-    title: "New Adventures",
-    description: "Exploring life together, hand in hand. Every challenge we faced made us stronger.",
-    icon: MapPin,
+    title: "New Baby",
+    description: "That year, a new member joined our family, Miu — our baby, Smirnoff Alexei. In the middle of the storm, he was the miracle of that year. From the moment he was just a tiny little one, you became the best dad ever — full of love, patience, and tenderness.",
+    icon: Cat,
     color: "rose",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2021.jpg",
   },
   {
     year: 2022,
-    title: "Growing Together",
-    description: "Building our dreams, supporting each other, and falling more in love every day.",
+    title: "Living Together",
+    description: "This year, we finally moved in together. At first, we lived in a tiny apartment, but soon after, we found a new one for the four of us. That was the beginning of our home, just the two of us, with Azúcar and Alexei, against the world.",
     icon: Sparkles,
     color: "gold",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2022.jpg",
   },
   {
     year: 2023,
-    title: "Unforgettable Moments",
-    description: "More adventures, more laughter, more reasons to be grateful for you in my life.",
-    icon: Calendar,
+    title: "Omega",
+    description: "With a lot of effort and hard work (and a little help), we saved enough to buy our motorcycle. Omega will always be our first one, the one you truly learned to ride on, the one that took us to so many places, through the cold, the heat, the rain, and so much fun.",
+    icon: Bike,
     color: "peach",
-    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2023.jpg",
+  },
+    {
+    year: 2023,
+    title: "My Amazing Engineer",
+    description: "You graduated from EPN. I’ve always been so proud of you, but that day was truly special, watching you present, defend your thesis, and then celebrate your big day. You’re the most perfect engineer in the world: intelligent, strong, and capable of absolutely anything you set your mind to.",
+    icon: GraduationCap,
+    color: "rose",
+    image: "/src/assets/20232.jpg",
   },
   {
     year: 2024,
-    title: "Still Going Strong",
-    description: "Every day with you is a gift. Our love continues to bloom and grow.",
-    icon: Heart,
+    title: "New Beginnings",
+    description: "New job, new city, a new beginning. It was the year we both had to start over on our own. Learning to live without you by my side was one of the hardest lessons. We had to adapt, grow, and overcome so much, but it made us stronger. We also learned to love each other even more despite the distance, and every reunion, every minute together, became even more precious.",
+    icon: Plane,
     color: "rose",
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2024.webp",
   },
   {
     year: 2025,
     title: "Today — 7 Years",
-    description: "Celebrating seven incredible years together. Here's to forever with you, my love.",
+    description: "And now… seven years together, my love! Can you believe it? Seven beautiful years by your side. These years have been full of learning, growth, laughter, and love. We’ve grown so much, both as a couple and as individuals. All these years together are proof that when love is real, anything is possible.",
     icon: Sparkles,
     color: "gold",
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&auto=format&fit=crop&q=60",
+    image: "/src/assets/2025.jpeg",
   },
 ];
 
@@ -84,7 +92,7 @@ const Timeline = () => {
               Our Story
             </h1>
             <p className="text-xl text-foreground/70">
-              A timeline of our beautiful journey together
+              Our beautiful journey together my baby
             </p>
           </div>
 
