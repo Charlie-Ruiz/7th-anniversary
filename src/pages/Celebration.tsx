@@ -45,13 +45,13 @@ const Celebration = () => {
             </p>
             
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
-              Thank you for being my reason to smile every single day. 💕
+              Thank you for being my reason to smile every single day of my life 💕
             </p>
 
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
               Here's to the memories we've created, the adventures we've shared, 
-              and the beautiful future that awaits us. Every moment with you is a gift, 
-              and I can't wait to create countless more memories together.
+              and the beautiful future that awaits us. Every moment with you is just perfect, 
+              and I can't wait to create countless more memories together and with our babies.
             </p>
 
             <div className="pt-8">
@@ -69,7 +69,7 @@ const Celebration = () => {
                     I Love You More Than Words Can Say! 💝
                   </p>
                   <p className="text-xl text-foreground/70">
-                    Here's to forever with you, my love.
+                    Happy anniversary preciosa de mi vida! Te amo con todo mi corazón.
                   </p>
                 </div>
               )}
