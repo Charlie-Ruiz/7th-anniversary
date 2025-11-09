@@ -5,6 +5,9 @@ import { Heart, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
 
+// 👇 Importa el mp3 desde el código
+import loveSong from "@/assets/Manuel-Medrano-La-Distancia.mp3"; // <- renómbralo sin espacios
+
 const Home = () => {
   const [musicPlaying, setMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -62,11 +65,9 @@ const Home = () => {
       </div>
 
       <GlobalNavigation />
-      <audio 
-        ref={audioRef}
-        src="/src/assets/Manuel Medrano - La Distancia (Letra).mp3"
-        loop
-      />
+
+      {/* 👇 Usa la variable importada */}
+      <audio ref={audioRef} src={loveSong} loop />
     </div>
   );
 };
