@@ -5,9 +5,12 @@ import { Heart, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
 
+// 🎵 Importa tu canción desde assets
+import loveSong from "@/assets/Manuel Medrano - La Distancia (Letra).mp3";
+
 const Home = () => {
   const [musicPlaying, setMusicPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef(null);
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -42,7 +45,12 @@ const Home = () => {
           {/* Texto e interacción */}
           <div className="space-y-12 max-w-2xl mx-auto">
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-              Since that November 9th, seven years ago, I haven’t stopped loving you for even a second. These years have been filled with love, laughter, tears, adventures, surprises, disagreements, anger, kisses, and reunions. And I wouldn’t change a single thing, because every moment has led us to this beautiful relationship we share today.
+              Since that November 9th, seven years ago, I haven’t stopped loving
+              you for even a second. These years have been filled with love,
+              laughter, tears, adventures, surprises, disagreements, anger,
+              kisses, and reunions. And I wouldn’t change a single thing, because
+              every moment has led us to this beautiful relationship we share
+              today.
             </p>
 
             {/* Botón para ir al timeline */}
@@ -60,7 +68,9 @@ const Home = () => {
               onClick={toggleMusic}
               className="flex items-center gap-2 mx-auto text-muted-foreground hover:text-primary transition-colors"
             >
-              <Music className={`w-5 h-5 ${musicPlaying ? "animate-pulse" : ""}`} />
+              <Music
+                className={`w-5 h-5 ${musicPlaying ? "animate-pulse" : ""}`}
+              />
               <span>{musicPlaying ? "Music Playing" : "Play Our Song"}</span>
             </button>
           </div>
@@ -70,12 +80,8 @@ const Home = () => {
       {/* Navegación global */}
       <GlobalNavigation />
 
-      {/* Audio (ahora referencia correcta a assets) */}
-      <audio
-        ref={audioRef}
-        src="/assets/Manuel Medrano - La Distancia (Letra).mp3"
-        loop
-      />
+      {/* Audio con referencia correcta */}
+      <audio ref={audioRef} src={loveSong} loop />
     </div>
   );
 };
